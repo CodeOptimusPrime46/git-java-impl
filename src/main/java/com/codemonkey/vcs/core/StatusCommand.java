@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 public class StatusCommand {
+
   /**
    * Displays the status of the version control system, including staged, modified, and untracked files.
    *
@@ -28,13 +29,15 @@ public class StatusCommand {
       String indexHash = index.get(file);
       String lastCommitHash = lastCommit.get(file);
 
+      // FIXME: handle care where file is in last commit but not in index,
+      //  in this case its not untracked rather its unchanged and we need not to show it
       if (null != indexHash && !indexHash.equals(lastCommitHash)) {
         // File is staged but has been modified since last commit
         stagedFiles.add(file);
       } else if (null == indexHash && null == lastCommitHash) {
         // since file is not in index and not in last commit, it is untracked
         untrackedFiles.add(file);
-      } else if (!workingDirHash.equals(indexHash)) {
+      } else if (null != indexHash && !workingDirHash.equals(indexHash)) {
         // File is modified in working directory but not staged
         modifiedFiles.add(file);
       }

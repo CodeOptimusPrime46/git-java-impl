@@ -1,7 +1,22 @@
 # git-java-impl
 
-`git-java-impl` is a Java-based implementation of a Git-like version control system. It provides basic functionalities such as repository initialization, adding files to the
-staging area, committing changes, viewing commit logs, and checking the repository status. The project is built using Java and Maven.
+The idea behind building this project was to **break the fourth wall and get to the core of the first tool I learned when
+I started my career in 2020: Git**. I wanted to understand how it works under the hood, so I decided to build a simple
+version control system in Java that mimics some of Git's core functionalities.
+
+`git-java-impl` is a Java-based implementation of a Git-like version control system. It provides basic functionalities
+such as repository initialization, adding files to the staging area, committing changes, viewing commit logs, and checking
+the repository status. The project is built using Java and Maven.
+
+## Cool Insights I Learned!
+
+While building this project, I learned some interesting facts about how Git works:
+
+- **Git doesn't save changes**: Instead of saving diffs, Git saves the complete file as a blob in its object database.
+- **Efficient storage**: Even though Git saves complete files, it uses compression and deduplication to optimize storage.
+- **Content-addressable storage**: Git identifies objects (like blobs, trees, and commits) using SHA-1 hashes, ensuring data integrity.
+
+These insights helped me better understand Git's internal mechanisms and inspired the design of this project.
 
 ## Features
 
@@ -31,35 +46,37 @@ staging area, committing changes, viewing commit logs, and checking the reposito
     ```
 4. Run the application:
    ```bash
-   java -jar target/git-java-impl-1.0-SNAPSHOT.jar
+   java -jar target/git-java-impl-1.0-SNAPSHOT-jar-with-dependencies.jar
    ```
 
 ## Usage
+
 1. Initialize a new repository:
    ```bash
-   java -jar target/git-java-impl-1.0-SNAPSHOT.jar init
+   java -jar target/git-java-impl-1.0-SNAPSHOT-jar-with-dependencies.jar init
    ```
-   
+
 2. Add files to the repository:
    ```bash
-   java -jar target/git-java-impl-1.0-SNAPSHOT.jar add <filename>.<extension>
+   java -jar target/git-java-impl-1.0-SNAPSHOT-jar-with-dependencies.jar add <filename>.<extension>
    ```
 3. Commit changes with a message:
    ```bash
-    java -jar target/git-java-impl-1.0-SNAPSHOT.jar commit -m "Your commit message"
+    java -jar target/git-java-impl-1.0-SNAPSHOT-jar-with-dependencies.jar commit -m "Your commit message"
     ```
 4. View the commit log:
     ```bash
-    java -jar target/git-java-impl-1.0-SNAPSHOT.jar log
+    java -jar target/git-java-impl-1.0-SNAPSHOT-jar-with-dependencies.jar log
     ```
 5. Check the status of the repository:
     ```bash
-    java -jar target/git-java-impl-1.0-SNAPSHOT.jar status
+    java -jar target/git-java-impl-1.0-SNAPSHOT-jar-with-dependencies.jar status
     ```
 6. View the contents of a index:
     ```bash
-    java -jar target/git-java-impl-1.0-SNAPSHOT.jar show-index
+    java -jar target/git-java-impl-1.0-SNAPSHOT-jar-with-dependencies.jar show-index
     ```
+
 ## Pending Features
 
 - **diff**: Implement functionality to show differences between the working directory and the last commit.
