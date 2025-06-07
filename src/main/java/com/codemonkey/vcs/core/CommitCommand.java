@@ -1,6 +1,7 @@
 package com.codemonkey.vcs.core;
 
 import static com.codemonkey.vcs.utils.CommonPath.HEAD;
+import static com.codemonkey.vcs.utils.CommonPath.INDEX_FILE;
 
 import com.codemonkey.vcs.model.Commit;
 import com.codemonkey.vcs.model.Tree;
@@ -44,6 +45,6 @@ public class CommitCommand {
     Files.writeString(currentPath, commitHash, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
 
     // clean up the index file
-    Files.write(currentPath, "".getBytes(), StandardOpenOption.TRUNCATE_EXISTING);
+    Files.write(Paths.get(INDEX_FILE), "".getBytes(), StandardOpenOption.TRUNCATE_EXISTING);
   }
 }
