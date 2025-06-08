@@ -13,7 +13,7 @@ is in blob for ease. Objects folder in actual git has subfolders with the first 
 here I'm saving the files directly in the objects folder. The tree object and commit object are saved as a JSON file for
 simplicity.
 
-## Cool Insights I Learned!
+## Cool Insights!
 
 While building this project, I learned some interesting facts about how Git works:
 
