@@ -8,6 +8,11 @@ version control system in Java that mimics some of Git's core functionalities.
 such as repository initialization, adding files to the staging area, committing changes, viewing commit logs, and checking
 the repository status. The project is built using Java and Maven.
 
+In the current implementation, I'm not using any compression to deflate files and save it, file contents are saved as
+is in blob for ease. Objects folder in actual git has subfolders with the first two characters of SHA-1 hash,
+here I'm saving the files directly in the objects folder. The tree object and commit object are saved as a JSON file for
+simplicity.
+
 ## Cool Insights!
 
 While building this project, I learned some interesting facts about how Git works:
