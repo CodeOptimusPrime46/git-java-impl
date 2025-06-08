@@ -1,7 +1,8 @@
 package com.codemonkey.vcs;
 
-import com.codemonkey.vcs.core.Add;
+import com.codemonkey.vcs.core.AddCommand;
 import com.codemonkey.vcs.core.CommitCommand;
+import com.codemonkey.vcs.core.DiffCommand;
 import com.codemonkey.vcs.core.Initializer;
 import com.codemonkey.vcs.core.LogCommand;
 import com.codemonkey.vcs.core.StatusCommand;
@@ -18,7 +19,7 @@ public class VCSApp {
    * Main method to run the VCS application. Usage: vcs <command> [options] Available commands:
    *
    * <li>init: Initialize a new version control repository.</li>
-   * <li>add file: Add a file to the staging area.</li>
+   * <li>add file: AddCommand a file to the staging area.</li>
    * <li>commit message: Commit changes with a message.</li>
    * <li>log: Show the commit log.</li>
    * <li>status: Show the status of the repository.</li>
@@ -40,7 +41,7 @@ public class VCSApp {
         break;
       case "add":
         System.out.println("Adding files to staging area...");
-        Add.addFile(args[1]);
+        AddCommand.addFile(args[1]);
         break;
       case "commit":
         System.out.println("Committing changes...");

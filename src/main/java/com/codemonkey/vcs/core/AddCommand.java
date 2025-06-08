@@ -11,7 +11,7 @@ import java.nio.file.StandardOpenOption;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Add {
+public class AddCommand {
 
   /**
    * Adds a file to the staging area.
