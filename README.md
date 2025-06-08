@@ -8,7 +8,7 @@ version control system in Java that mimics some of Git's core functionalities.
 such as repository initialization, adding files to the staging area, committing changes, viewing commit logs, and checking
 the repository status. The project is built using Java and Maven.
 
-## Cool Insights I Learned!
+## Cool Insights!
 
 While building this project, I learned some interesting facts about how Git works:
 
