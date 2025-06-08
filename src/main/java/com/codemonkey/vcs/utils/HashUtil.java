@@ -3,8 +3,7 @@ package com.codemonkey.vcs.utils;
 import java.security.MessageDigest;
 
 /**
- * Utility class for hashing operations.
- * Provides methods to compute SHA-1 hashes of strings.
+ * Utility class for hashing operations. Provides methods to compute SHA-1 hashes of strings.
  */
 public class HashUtil {
 
@@ -30,4 +29,3 @@ public class HashUtil {
     }
   }
 }
-

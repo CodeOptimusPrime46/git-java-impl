@@ -17,14 +17,14 @@ public class VCSApp {
   /**
    * Main method to run the VCS application. Usage: vcs <command> [options] Available commands:
    *
-   * 1. init: Initialize a new version control repository.
-   * 2. add <file>: Add a file to the staging area.
-   * 3. commit <message>: Commit changes with a message.
-   * 4. log: Show the commit log.
-   * 5. status: Show the status of the repository.
-   * 6. push: Push changes to a remote repository (not implemented).
-   * 7. pull: Pull changes from a remote repository (not implemented).
-   * 8. how-index: Show the contents of the index file for debugging.
+   * <li>init: Initialize a new version control repository.</li>
+   * <li>add file: Add a file to the staging area.</li>
+   * <li>commit message: Commit changes with a message.</li>
+   * <li>log: Show the commit log.</li>
+   * <li>status: Show the status of the repository.</li>
+   * <li>push: Push changes to a remote repository (not implemented).</li>
+   * <li>pull: Pull changes from a remote repository (not implemented).</li>
+   * <li>show-index: Show the contents of the index file for debugging.</li>
    */
   public static void main(String[] args) throws IOException {
     if (args.length == 0) {
